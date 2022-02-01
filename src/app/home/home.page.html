@@ -1,20 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <div class="scan_container" *ngIf="!codeScanned">
+    <ion-icon name="scan-outline"></ion-icon>
+    <ion-button (click)="scanQR()">Scan</ion-button>
+    
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="scanned_container" *ngIf="codeScanned">
+    <form>
+  
+      <p class="enter_your_phone">Mobile Number</p>
+ 
+      <ion-item lines="none">
+      
+        <ion-input type="tel" placeholder="Mobile Number"></ion-input>
+      </ion-item>
+      <p class="enter_your_phone">Add Stamp</p>
+      <ion-item lines="none">
+      
+        <ion-input type="text" placeholder="Add image for stamp"></ion-input>
+      </ion-item>
+  
+   
+       
+      
+    
+      <ion-button (click)="submit()">
+        Confirm
+      </ion-button>
+      </form>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>

@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  codeScanned=false;
   constructor() {}
-
+scanQR(){
+  if(!this.codeScanned){
+    this.codeScanned=true;
+  }
+}
+submit(){
+  this.codeScanned=false;
+}
 }

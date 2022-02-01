@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form>
+    <img src="assets/logo_cons.png" alt="" class="logo">
+    <p class="enter_your_phone">Register</p>
+    <ion-item lines="none">
+     
+      <ion-input type="text" placeholder="Name"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+    
+      <ion-input type="tel" placeholder="Mobile Number"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+    
+      <ion-input type="email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+     
+      <ion-input type="text" placeholder="CR Name"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+     
+      <ion-input type="text" placeholder="CR No"></ion-input>
+    </ion-item>
+    <div class="upload_container">
+      <p>Upload Photo</p>
+    </div>
+    <p class="shop_location">Shop Location</p>
+    <ion-item lines="none">
+      <ion-textarea rows="2" placeholder="address">
+
+      </ion-textarea>
+    </ion-item>
+    <ion-button (click)="submit()">
+      Register
+    </ion-button>
+    </form>
+</ion-content>
