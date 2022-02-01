@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { ServerService } from '../providers/server.service';
 
 @Component({
   selector: 'app-register',
@@ -8,11 +9,17 @@ import { NavController } from '@ionic/angular';
 })
 export class RegisterPage implements OnInit {
 
-  constructor(private navCtrl:NavController) { }
+  constructor(private navCtrl:NavController,private server:ServerService) { }
 
   ngOnInit() {
   }
   submit(){
-    this.navCtrl.navigateRoot('/tabs')
+    let data
+    this.server.shopRegister(data).subscribe(res=>{
+      console.log(res)
+    },err=>{
+      console.log(err,'errorrr')
+    })
+    // this.navCtrl.navigateRoot('/tabs')
   }
 }
